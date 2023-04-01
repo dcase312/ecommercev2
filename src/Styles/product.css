@@ -1,0 +1,100 @@
+
+.productGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+    max-width: 100%;
+    margin: 10px auto;
+    
+}
+
+.centerGrid{
+    max-width: 90%;
+    margin: 100px auto;
+    
+}
+
+.productCard{
+   text-align: center;
+   width: 90%;
+   box-shadow: .3rem .3rem 2rem rgb(64, 60, 60);
+   padding-bottom: 15px;
+   
+}
+
+.productDescription{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.productTitle{
+    font-size: 28px;
+}
+
+.productPrice{
+    font-size: 22px;
+}
+
+.productImg{
+    width: 100%;
+    height: auto;
+}
+
+
+.atcButton{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.atcButton:hover {
+    background-color: rgb(83, 104, 83);
+    color: white;
+
+}
+
+.atcButton:active {
+  background-color: rgb(83, 104, 83);
+  box-shadow: 0 5px rgb(143, 143, 121);
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 480px){
+    .productGrid{
+        display: flex;
+        flex-direction: column;
+    }
+    .productCard{
+        margin: 0 30px;
+        width: auto;
+    }
+    .productTitle{
+        font-size: 25px;
+    }
+    .productPrice, .productDescription{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 799px) {
+    .productGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productCard{
+        margin: 5px auto;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+    .productGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productCard{
+        margin: 5px auto;
+    }
+
+    .atcButton{
+        font-size: 16px;
+    }
+}

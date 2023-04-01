@@ -1,0 +1,181 @@
+.businessTitle{
+    display: flex;
+    color: rgb(83, 104, 83);
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 60px;
+    position: relative;
+    justify-content: center;
+} 
+
+
+.slideshow{
+    overflow: hidden;
+    height: 800px;
+   
+}
+
+
+.slideshow figure{
+    position: relative;
+    width: 300%;
+    margin: 0;
+    left: 0;
+    animation: 10s slideshow infinite;
+}
+
+.slideshow figure img{
+    float: left;
+    width: 33.33%;
+}
+
+@keyframes slideshow{
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%
+    }
+    45% {
+        left: -100%
+    }
+    50% {
+        left: -200%
+    }
+    70% {
+        left: -200%
+    }
+    
+    
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 40px;
+    color: rgb(83, 104, 83);
+    border: 10px double rgb(83, 104, 83);
+    padding: 10px;
+    margin: 100px auto;
+    max-width: 99.8%;
+    justify-content: center;
+}
+
+
+.centerGridContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    margin-top: 100px;
+    max-width: 90%;
+}
+
+.gridCard{
+    align-items: center;
+    max-width: 500px;
+}
+
+.cardImage{
+    height: 300px;
+    width: 500px;
+}
+
+.contentTitle{
+    color: rgb(83, 104, 83);
+    font-family: 'Shadows Into Light Two';
+    font-size: 35px;
+}
+
+.content{
+    color: rgb(83, 104, 83);
+    font-size: 22px;
+}
+
+@media screen and (max-width: 480px){
+    .businessTitle{
+        font-size: 40px;
+    }
+    nav a{
+        font-size: 15px;
+    }
+    .slideshow{
+        height: 250px;
+    }
+    .about{
+        font-size: 25px;
+    }
+    .gridContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .gridCard{
+        max-width: 400px;
+    }
+    .cardImage{
+        width: 100%;
+        height: auto;
+    }
+    .contentTitle{
+        font-size: 25px;
+    }
+    .content{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 799px) {
+    .businessTitle{
+        font-size: 50px;
+    }
+
+    nav a{
+        font: 18px;
+    }
+
+    .slideshow{
+        height: 400px;
+    }
+
+    .gridContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardImage{
+        width: 400px;
+        height: 240px;
+    }
+
+    .gridCard{
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+    .slideshow{
+        height: 400px;
+    }
+
+    .gridContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardImage{
+        width: 500px;
+        height: 300px;
+    }
+
+    .gridCard{
+        width: 500px;
+    }
+}

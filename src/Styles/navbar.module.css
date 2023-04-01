@@ -1,0 +1,55 @@
+/* General CSS starts here*/
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+nav{
+    display:flex;
+    justify-content: center;
+}
+
+.icon{
+text-decoration: none;
+color: rgb(83, 104, 83);
+margin: 20px;
+margin-left: 0;
+font-size: 23px;
+}
+
+.rowIcons{
+    text-decoration: none;
+    color: rgb(83, 104, 83);
+    margin: 20px 2px;
+    font-size: 23px;
+    }
+
+
+.businessTitle{
+    display: flex;
+    color: rgb(83, 104, 83);
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 60px;
+    /* justify-self: center; */
+    /* vertical-align: middle; */
+    /* position: relative; */
+    justify-content: center;
+
+} 
+
+
+@media screen and (max-width: 480px){
+    .businessTitle{
+        font-size: 40px;
+    }
+    .icon{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 799px) {
+    .businessTitle{
+        font-size: 50px;
+    }
+
+    .icon{
+        font: 18px;
+    }
+}

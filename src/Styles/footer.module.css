@@ -1,0 +1,68 @@
+footer{
+    background-color: rgb(83, 104, 83);
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.icon{
+    color: rgb(237, 222, 203);
+    padding: 20px;
+    font-size: 30px;
+}
+.newsletterTitle{
+    display: flex;
+    color: rgb(237, 222, 203);
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 38px;
+    position: relative;
+    justify-content: center;
+}
+
+.newsletterDescription{
+    color: rgb(237, 222, 203);
+    font-size: 22px;
+}
+
+.newsletterSubscription{
+    margin-bottom: 50px;
+}
+
+.footerLinks{
+    margin-bottom: 50px;
+}
+
+.subscribeField{
+    height: 40px;
+    width: 300px;
+}
+
+.subscribeButton{
+    padding: 5px;
+    height: 40px;
+    margin-left: -5px;
+    color: black;
+    
+}
+
+.subscribeButton:hover {
+    background-color: rgb(237, 222, 203);
+    color: black;
+}
+
+@media screen and (max-width: 480px){
+    .newsletterTitle{
+        font-size: 25px;
+    }
+    .newsletterDescription{
+        font-size: 15px;
+    }
+    .newsletterSubscription{
+        margin-bottom: 0;
+    }
+    .footerLinks{
+        margin-bottom: 10px;
+    }
+}
+
+
