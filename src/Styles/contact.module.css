@@ -38,6 +38,12 @@ form{
     
 }
 
+.errorMessage{
+    color: white;
+    background-color:red;
+    margin-top: 0;
+}
+
 .atcButton{
     border-radius: 10px;
     padding: 5px;
