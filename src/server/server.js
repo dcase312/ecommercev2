@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// ESTABLISHED DATABASE CONNECTION
 const db = mysql.createConnection({
   host: "127.0.0.1",
   user: 'root',
@@ -41,6 +40,7 @@ const whereChecker = categoryCheck ? "WHERE " : "";
       console.log(err);
       return res.json(err);
     }
+    console.log(data)
     return res.json(data);
   });
 });

@@ -4,7 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px;
     max-width: 100%;
-    margin: 10px auto;
+    margin: 50px auto;
     
 }
 
@@ -17,18 +17,14 @@
 .filterContainer{
     display: flex;
     /* flex-direction: row; */
-    justify-content:center;
+    justify-content:right;
     margin: 35px auto;
-    width: 90%;
+    width: 95%;
 }
-.filterTitle {
-    text-align: center;
-    justify-content: center;
-}
+
+
 .filterLabel {
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 
@@ -95,6 +91,16 @@
     }
     .productPrice, .productDescription{
         font-size: 18px;
+    }
+    .productFilter{
+        font-size: 15px;
+        
+    }
+    .filterLabel {
+        font-size: 20px;
+    }
+    .filterContainer{
+        width: 80%;
     }
 }
 

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Aloe Vera",
+    "description": "Best known for treating burns and skin irritation, the aloe plant is low maintenance and a great air purifier.",
+    "price": "30.00",
+    "image": "../images/aloe.webp",
+    "category": "Medium Light"
+  },
+  {
+    "id": 2,
+    "name": "Bromeliad",
+    "description": "Low maintenance and adaptable to any living conditions, provides beautiful tropical blooms.",
+    "price": "30.00",
+    "image": "../images/brom.webp",
+    "category": "Any Light"
+  },
+  {
+    "id": 3,
+    "name": "Corn Plant",
+    "description": "Native to dry conditions, this beginner plant is low maintenance and is a great statement piece.",
+    "price": "40.00",
+    "image": "../images/cane.webp",
+    "category": "Medium Light"
+  },
+  {
+    "id": 4,
+    "name": "Fiddle Leaf Fig",
+    "description": "This beautiful tree loves lots of humidity and sun and can grow as high as the ceiling indoors.",
+    "price": "50.00",
+    "image": "../images/fiddle-fig.webp",
+    "category": "High Light"
+  },
+  {
+    "id": 5,
+    "name": "Money Tree",
+    "description": "Thought to bring money and wealth, this tree's beautiful foilage makes it a show stopper.",
+    "price": "45.00",
+    "image": "../images/money.webp",
+    "category": "High Light"
+  },
+  {
+    "id": 6,
+    "name": "Monstera",
+    "description": "Known to grow \"delisiosa\" fruit in the wild, this vining plant would do best by a sunny window.",
+    "price": "45.00",
+    "image": "../images/monstera.webp",
+    "category": "High Light"
+  },
+  {
+    "id": 7,
+    "name": "Majestic Palm",
+    "description": "This tree loves tropical climates and draws eyes with it's unique upward-growing leaves.",
+    "price": "40.00",
+    "image": "../images/palm.webp",
+    "category": "High Light"
+  },
+  {
+    "id": 8,
+    "name": "Peace Lily",
+    "description": "With its dark leaves and beautiful blooms; this addition will make you the envy of your friends.",
+    "price": "30.00",
+    "image": "../images/peace-lily.webp",
+    "category": "Medium Light"
+  },
+  {
+    "id": 9,
+    "name": "Marble Pothos",
+    "description": "This vining plant grows in many different light condition and makes a great addition to any space.",
+    "price": "30.00",
+    "image": "../images/pothos.webp",
+    "category": "Medium Light"
+  },
+  {
+    "id": 10,
+    "name": "Snake Plant",
+    "description": "The godfather of low maintenance, this perfect beginner plant grows in any light condition.",
+    "price": "40.00",
+    "image": "../images/snake-plant.jpeg",
+    "category": "Any Light"
+  },
+  {
+    "id": 11,
+    "name": "Spider Plant",
+    "description": "It's hanging leaves and offspring earns this plant it's name. A great centerpiece in any room.",
+    "price": "30.00",
+    "image": "../images/spider.webp",
+    "category": "Medium Light"
+  },
+  {
+    "id": 12,
+    "name": "ZZ Plant",
+    "description": "Growing in any light condition, this low maintenance gem is quite the crowd pleaser.",
+    "price": "50.00",
+    "image": "../images/zz.jpeg",
+    "category": "Any Light"
+  }
+]
