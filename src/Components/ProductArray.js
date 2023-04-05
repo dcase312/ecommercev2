@@ -10,18 +10,18 @@ const ProductArray = () => {
 const [products, setProducts] = useState([]);
 const [category, setCategory] = useState("");
 const [price, setPrice] = useState("");
-const [filteredList2, setFilteredList2] = useState([])
+// const [filteredList2, setFilteredList2] = useState([])
 const [filteredList, setFilteredList] = useState([])
 
 useEffect(() => {
     const fetchAllProducts = async () => {
         setProducts(productArray)
         setFilteredList(products)
-        setFilteredList2(products)
+        // setFilteredList2(products)
 
     };
     fetchAllProducts();
-  }, [category, price, filteredList, filteredList2]);
+  }, [category, price, filteredList]);
 
   
 
@@ -29,19 +29,33 @@ const catgoryFilterHandler = (e) => {
 setCategory(e.target.value);
 console.log(e.target.value)
 }
-// sort(function(a, b){return a.price-b.price})
+
 const priceFilterHandler = (e) => {
-setPrice(e.target.value)
+    setPrice(e.target.value);
+    if (e.target.value === "Low") {
+      const sortedList = products.slice().sort((a, b) => a.price - b.price);
+      setFilteredList(sortedList);
+    } else if (e.target.value === "High") {
+      const sortedList = products.slice().sort((a, b) => b.price - a.price);
+      setFilteredList(sortedList);
+    } else {
+      setFilteredList(products);
+    }
+  };
+  
+// sort(function(a, b){return a.price-b.price})
+// const priceFilterHandler = (e) => {
+// setPrice(e.target.value)}
 // if (e.target.value === "low"){
 //     let ascList = filteredList2.map((p) => {
         
 //     }).sort((a, b) => a.price - b.price)
 //     setFilteredList2(ascList)
-if (e.target.value === "low") {
-    const lowestPriceGoods = filteredList2.sort((el1,el2) => el1.price - el2.price);
-    setFilteredList2([...lowestPriceGoods])
-    console.log(filteredList2)
-  }
+// if (e.target.value === "low") {
+//     const lowestPriceGoods = filteredList2.sort((el1,el2) => el1.price - el2.price);
+//     setFilteredList2([...lowestPriceGoods])
+//     console.log(filteredList2)
+//   }
 //   if (price === "high") {
 //     const highestPriceGoods = filteredList2.sort((el1,el2) => el2.price.localeCompare(el1.price, undefined, {numeric: true}));
 //     setFilteredList2([...highestPriceGoods]);
@@ -57,7 +71,7 @@ if (e.target.value === "low") {
 // }
 
 
-}
+
 return (
     <div className="centerGrid">
       <div className="filterContainer">
@@ -81,7 +95,7 @@ return (
           </div>
           </div>
           <div className="productGrid">
-            {category && price === "" ? products.map((product) => (
+            {category === "" ? filteredList.map((product) => (
               <div key={product.id} className="productCard" >
               <img src={product.image} alt={product.name} className="productImg" />
               <h2 className="productTitle">{product.name}</h2>
@@ -89,7 +103,7 @@ return (
               <p className="productDescription">{product.description}</p>
               <button className="atcButton">Add To Cart</button>
             </div>
-          )): products.filter(product => product.category.includes(category)).map((filteredProduct) => (
+          )): filteredList.filter(product => product.category.includes(category)).map((filteredProduct) => (
             <div key={filteredProduct.id} className="productCard" >
             <img src={filteredProduct.image} alt={filteredProduct.name} className="productImg" />
             <h2 className="productTitle">{filteredProduct.name}</h2>
