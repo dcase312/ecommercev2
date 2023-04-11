@@ -39,7 +39,6 @@ return (
               <option value="">Select</option>
               <option value="High Light">High Light</option>
               <option value="Medium Light">Medium Light</option>
-              <option value="Low Light">Low Light</option>
               <option value="Any Light">Any Light</option>
             </select>
           </div>

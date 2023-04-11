@@ -1,7 +1,8 @@
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import '../Styles/product.css'
 import productArray from './products.json'
 // import Card from "../Components/Card";
@@ -81,7 +82,6 @@ return (
               <option value="">Select</option>
               <option value="High Light">High Light</option>
               <option value="Medium Light">Medium Light</option>
-              <option value="Low Light">Low Light</option>
               <option value="Any Light">Any Light</option>
             </select>
           </div>
@@ -103,7 +103,7 @@ return (
               <p className="productDescription">{product.description}</p>
               <button className="atcButton">Add To Cart</button>
             </div>
-          )): filteredList.filter(product => product.category.includes(category)).map((filteredProduct) => (
+          )): filteredList.filter(product => product.category.includes(category, price)).map((filteredProduct) => (
             <div key={filteredProduct.id} className="productCard" >
             <img src={filteredProduct.image} alt={filteredProduct.name} className="productImg" />
             <h2 className="productTitle">{filteredProduct.name}</h2>
