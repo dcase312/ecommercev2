@@ -12,10 +12,12 @@ const [products, setProducts] = useState([]);
 const [category, setCategory] = useState("");
 const [price, setPrice] = useState("");
 // const [filteredList2, setFilteredList2] = useState([])
+//we need to check state here
 const [filteredList, setFilteredList] = useState([])
+console.log(filteredList)
 
 useEffect(() => {
-    const fetchAllProducts = async () => {
+    const fetchAllProducts = () => {
         setProducts(productArray)
         setFilteredList(products)
         // setFilteredList2(products)
@@ -30,46 +32,23 @@ const catgoryFilterHandler = (e) => {
 setCategory(e.target.value);
 console.log(e.target.value)
 }
+console.log(filteredList)
 
 const priceFilterHandler = (e) => {
     setPrice(e.target.value);
     if (e.target.value === "Low") {
       const sortedList = products.slice().sort((a, b) => a.price - b.price);
-      setFilteredList(sortedList);
-    } else if (e.target.value === "High") {
-      const sortedList = products.slice().sort((a, b) => b.price - a.price);
-      setFilteredList(sortedList);
-    } else {
-      setFilteredList(products);
-    }
+      setFilteredList(sortedList)
+      console.log(sortedList)}
+    // } else if (e.target.value === "High") {
+    //   const sortedList = products.slice().sort((a, b) => b.price - a.price);
+    //   setFilteredList(sortedList);
+    // } else {
+    //   setFilteredList(products);
+    // }
+    console.log(products)
+    console.log(filteredList)
   };
-  
-// sort(function(a, b){return a.price-b.price})
-// const priceFilterHandler = (e) => {
-// setPrice(e.target.value)}
-// if (e.target.value === "low"){
-//     let ascList = filteredList2.map((p) => {
-        
-//     }).sort((a, b) => a.price - b.price)
-//     setFilteredList2(ascList)
-// if (e.target.value === "low") {
-//     const lowestPriceGoods = filteredList2.sort((el1,el2) => el1.price - el2.price);
-//     setFilteredList2([...lowestPriceGoods])
-//     console.log(filteredList2)
-//   }
-//   if (price === "high") {
-//     const highestPriceGoods = filteredList2.sort((el1,el2) => el2.price.localeCompare(el1.price, undefined, {numeric: true}));
-//     setFilteredList2([...highestPriceGoods]);
-//   }
-//   if (price === "") {
-//     setFilteredList2(products);
-//   }
-
-// if (price === "high"){
-//     let descList = filteredList2.sort(function(a, b){return b-a})
-//     setFilteredList(descList)
-    
-// }
 
 
 
